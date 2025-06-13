@@ -3,6 +3,10 @@ console.log('Hier komt je server voor Sprint 12.')
 import express from 'express';
 
 // hier komt database linken 
+const housesResponse = await fetch('https://fdnd-agency.directus.app/items/f_houses')
+const housesResponseJSON = await housesResponse.json()
+
+// Importeer de Liquid package
 import { Liquid } from 'liquidjs'
 
 // Maak een nieuwe Express applicatie aan
