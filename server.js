@@ -48,3 +48,23 @@ app.get('/', async function (request, response) {
   
     response.render('detail.liquid', { house: housesData.data });
   });
+  
+  
+// Stel het poortnummer in waar Express op moet luisteren
+app.set('port', process.env.PORT || 8000)
+
+// Start de server
+app.listen(app.get('port'), function () {
+    console.log(`Server is running on http://localhost:${app.get('port')}`)
+})
+
+
+
+
+
+
+
+
+
+
+
