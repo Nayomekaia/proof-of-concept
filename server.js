@@ -1,4 +1,3 @@
-console.log('Hier komt je server voor Sprint 12.')
 // Importeer het npm package Express
 import express from 'express';
 
