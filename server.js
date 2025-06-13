@@ -34,3 +34,9 @@ app.use(express.static('public'))
 // Maak werken met data uit formulieren iets prettiger
 app.use(express.urlencoded({ extended: true }))
 
+// hierondert routes aanmaken
+app.get('/', async function (request, response) {
+    response.render('index.liquid', {
+      houses: housesResponseJSON.data,
+    });
+  })
