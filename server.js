@@ -40,3 +40,11 @@ app.get('/', async function (request, response) {
       houses: housesResponseJSON.data,
     });
   })
+
+  app.get('/detail/:id', async function (request, response) {
+    const houseId = request.params.id;
+    const housesResponse = await fetch(`https://fdnd-agency.directus.app/items/f_houses/${houseId}`);
+    const housesData = await housesResponse.json();
+  
+    response.render('detail.liquid', { house: housesData.data });
+  });
